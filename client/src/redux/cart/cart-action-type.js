@@ -1,0 +1,8 @@
+const cartAction = {
+  TOOGEL_CART: "TOGGEL_CART",
+  ADD_ITEM: "ADD_ITEM",
+  CLEAR_ITEM: "CLEAR_ITEM",
+  REMOVE_ITEM: "REMOVE_ITEM",
+  CHANGE_ITEM_SIZE:"CHANGE_ITEM_SIZE"
+};
+export default cartAction;
