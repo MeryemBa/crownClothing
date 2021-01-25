@@ -3,12 +3,12 @@ const cors = require("cors");
 
 const bodyParser = require("body-parser");
 const path = require("path");
-var compression = require('compression');
+const compression = require('compression');
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 
-var enforce = require('express-sslify');
-const axios = require('axios');
+
+const enforce = require('express-sslify');
 
 
 if (process.env.NODE_ENV !== "production") require("dotenv").config();
