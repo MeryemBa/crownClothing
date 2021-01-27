@@ -18,4 +18,7 @@ export const clearItem = (item) => ({
 export const changeItemSize=(item,newSize)=>({
   type:cartAction.CHANGE_ITEM_SIZE,
   payload:{item,newSize},
-})
+});
+export const clearItemsArray = () => ({
+  type: cartAction.CLEAR_ITEMS_ARRAY,
+});

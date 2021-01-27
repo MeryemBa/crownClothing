@@ -60,16 +60,11 @@ function ProductDetail({item,addItem}) {
          <DetailsContainer>
              <FAQItem question={"Details"} >
                  <ul>
-                     <li>For the rotation High rise Elasticated waist</li>
-                     <li> Designed to fit you from bump to baby</li>
+                     <li>FPhasellus sed libero et enim dictum congue.</li>
+                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                  </ul>
         </FAQItem>
-        <FAQItem question={"Details"} >
-                 <ol>
-                     <li>For the rotation High rise Elasticated waist</li>
-                     <li> Designed to fit you from bump to baby</li>
-                 </ol>
-        </FAQItem>
+      
            
          </DetailsContainer>
 

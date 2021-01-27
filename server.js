@@ -1,13 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-
 const bodyParser = require("body-parser");
 const path = require("path");
-const compression = require('compression');
 const mailchimp = require("@mailchimp/mailchimp_marketing");
-
-
-
 const enforce = require('express-sslify');
 
 
@@ -19,15 +14,15 @@ mailchimp.setConfig({
   apiKey: process.env.MAILCHIMP_API_KEY,
   server: process.env.MAILCHIMP_API_KEY.split("-")[1]
 })
-
+//app initialisation
 const app = express();
 const port = process.env.PORT || 5000;
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(compression());
-app.use(enforce.HTTPS({ trustProtoHeader: true }))
+
+//app.use(enforce.HTTPS({ trustProtoHeader: true }))
 app.use(cors());
 
 if (process.env.NODE_ENV === "production") {

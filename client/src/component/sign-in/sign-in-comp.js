@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormInput from "../form-input/form-input-comp";
 import { auth, signWithGoogle } from "../../firebase/firebase.utils";
 import CostumButton from "../costum-button/custom-buttom-comp";
+
 import {
   SignInButtonContainer,
   SignInConatiner,
@@ -42,6 +43,7 @@ export default function SignIn() {
           value={email}
           onChange={handelChange}
           label="Email"
+       
           required
         />
         <FormInput

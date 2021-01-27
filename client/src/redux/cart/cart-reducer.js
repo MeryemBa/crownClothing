@@ -33,6 +33,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
           ...state,
           items: changeCartItemSize(state.items,action.payload.item,action.payload.newSize),
         };
+        case cartAction.CLEAR_ITEMS_ARRAY:
+          return{
+            ...state,
+            items:[]
+          };
     default:
       return state;
   }

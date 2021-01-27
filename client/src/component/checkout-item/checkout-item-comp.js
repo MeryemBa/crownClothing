@@ -18,7 +18,6 @@ function CheckoutItem({ item, addItem, clearItem, removeItem , changeItemSize}) 
 
 const [newSize,setnewSize]=useState(size);
 const [showButton,setButtonVisibility]=useState(false);
-console.table(newSize);
 const handelClick=()=>{
   if(item.size===newSize){
     setButtonVisibility(!showButton);
@@ -27,6 +26,14 @@ const handelClick=()=>{
   changeItemSize(item,newSize);
   setButtonVisibility(!showButton);
 }
+const handelChange=(value)=>{setnewSize(value);setButtonVisibility(!showButton)}
+
+const handelCancel=()=>{
+  setnewSize(size);
+
+  setButtonVisibility(!showButton);
+}
+
   return (
     <CheckoutItemContainer>
       <ImageContainer>
@@ -35,12 +42,13 @@ const handelClick=()=>{
       <TextConatiner>{name}</TextConatiner>
     <SizeConatiner >
     {!size?<span>Unisize</span>: 
-    <Size  handelChange={(e)=>{setnewSize(e.target.value);setButtonVisibility(!showButton)}}options={sizeOptions} selected={size}/>}
+    <Size  handelChange={(e)=>handelChange(e.target.value)} options={sizeOptions} 
+    selected={newSize}/>}
       {showButton
       &&(
       <div>
-        <SmallButton  onClick={()=>setButtonVisibility(!showButton)} inverted>Cancel</SmallButton>
-      <SmallButton onClick={handelClick}>update</SmallButton>
+        <SmallButton  onClick={handelCancel} inverted>Cancel</SmallButton>
+        <SmallButton  onClick={handelClick}>update</SmallButton>
       
       </div>
       )}

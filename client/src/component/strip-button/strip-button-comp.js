@@ -1,8 +1,10 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
+import { connect } from "react-redux";
+import {clearItemsArray} from "../../redux/cart/cart-action";
 
-function StripeCheckoutButton({ price, ...otherProps }) {
+function StripeCheckoutButton({clearItemsArray, price, ...otherProps }) {
   const priceForStripe = price * 100; //stripe accept price in cents
 
   const stripeAPIKey =
@@ -18,6 +20,7 @@ function StripeCheckoutButton({ price, ...otherProps }) {
     })
       .then((response) => {
         alert("succesful payment");
+        clearItemsArray();
       })
       .catch((error) => {
         console.log("payment problem: " + error);
@@ -42,5 +45,7 @@ function StripeCheckoutButton({ price, ...otherProps }) {
     />
   );
 }
-
-export default StripeCheckoutButton;
+const mapDispatchToProps = (dispatch) => ({
+  clearItemsArray:()=>dispatch(clearItemsArray())
+});
+export default connect(null,mapDispatchToProps)(StripeCheckoutButton);
