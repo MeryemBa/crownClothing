@@ -12,7 +12,7 @@ Crown clothing is an e-commerce application developed using React, Redux, Node J
 
 ## Demo:
 
-The application is deployed to Heroku and can be accessed through the following link: link here.
+The application is deployed to Heroku and can be accessed through the following link: [Crowm Clothing](https://mycrown-shop.herokuapp.com/).
 
 ## The technology used in this application:
 
@@ -46,8 +46,8 @@ To run this application, you have to follow these steps:
 1.  **Clone the repo**
 
 ```bash
-$ git clone git@github.com:url
-$ cd filename
+$ git clone https://github.com/MeryemBa/crown-clothing.git
+$ cd crown-clothing
 ```
 
 2.  **Create .env file**
