@@ -5,7 +5,8 @@ export const Select=styled.select`
 width:100%;
 padding:10px 10px 10px 0;
 text-transform: capitalize;
-backgroung-color:inherit;
+background-color: #fff;
+color:#000;
 
 
 `;
