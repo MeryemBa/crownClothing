@@ -18,6 +18,8 @@ function CheckoutItem({ item, addItem, clearItem, removeItem , changeItemSize}) 
 
 const [newSize,setnewSize]=useState(size);
 const [showButton,setButtonVisibility]=useState(false);
+
+console.log("chekout item has render")
 const handelClick=()=>{
   if(item.size===newSize){
     setButtonVisibility(!showButton);

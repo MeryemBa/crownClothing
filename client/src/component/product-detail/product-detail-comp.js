@@ -13,7 +13,7 @@ import {DetailContainer,ProductImage,ProductDetails,SizeContainer,CostomButtonDe
 function ProductDetail({item,addItem}) {
     const {imageUrl,name,price,id,color,size}=item;
 
-    const [pickedSize,setPickedSize]=useState(null);
+    const [pickedSize,setPickedSize]=useState(undefined);
     const [errorMessage,setErrorMessage]=useState(null);
     
 
@@ -51,7 +51,7 @@ function ProductDetail({item,addItem}) {
 
             { size!==undefined &&    <SizeContainer>
                 <h3>Size</h3> 
-           <Size name="size"  handelChange={(e)=>{setPickedSize(e.target.value);setErrorMessage(null)}} defaultMessage="Please Select your Size" options={size} />
+           <Size name="size" selected={pickedSize} handelChange={(e)=>{setPickedSize(e.target.value);setErrorMessage(null)}} defaultMessage="Please Select your Size" options={size} />
             </SizeContainer>}
             <ErrorMessage>{errorMessage?errorMessage:null }</ErrorMessage>
             
