@@ -58,7 +58,7 @@ function ProductDetail({item,addItem}) {
          <CostomButtonDetails type="submit">Add to bag</CostomButtonDetails>
          </form>
          <DetailsContainer>
-             <FAQItem question={"Details"} >
+             <FAQItem question={"Product Details"} >
                  <ul>
                      <li>FPhasellus sed libero et enim dictum congue.</li>
                      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
