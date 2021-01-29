@@ -9,10 +9,11 @@
 ## Introduction:
 
 Crown clothing is an e-commerce application developed using React, Redux, Node Js, Express, and Firebase;
+![The crown shop](https://cutt.ly/XkwQeS1)
 
 ## Demo:
 
-The application is deployed to Heroku and can be accessed through the following link: [Crown Clothing](https://mycrown-shop.herokuapp.com/).
+The application is deployed to Heroku and can be accessed through the following link: [Crown Clothing](https://thecrownshop.herokuapp.com/).
 
 ## The technology used in this application:
 
