@@ -8,7 +8,8 @@
 
 ## Introduction:
 
-Crown clothing is an e-commerce application developed using React, Redux, Node Js, Express, and Firebase;
+Crown clothing is an e-commerce application developed using React, Redux, Node Js, Express, and Firebase.
+
 ![The crown shop](https://cutt.ly/XkwQeS1)
 
 ## Demo:
